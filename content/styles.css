@@ -1,0 +1,41 @@
+body {
+  padding-top: 60px;
+  background-color: black;
+  color:white;
+}
+
+.btn-block {
+  margin-top: 40px;
+}
+
+.btn {
+  font-size: 5em;
+}
+
+.btn-block {
+  font-size: 3em;
+}
+
+/*.user-buttons {
+  display: none;
+}*/
+
+#red-display {
+  display: none;
+}
+
+#blue-display {
+  display: none;
+}
+
+#yellow-display {
+  display: none;
+}
+
+#green-display {
+  display: none;
+}
+
+#testDiv {
+  display: none;
+}

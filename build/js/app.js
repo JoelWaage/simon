@@ -39,9 +39,20 @@ $(document).ready(function() {
     newSimon.chooseColors();
     var output = newSimon.actualColors;
     output.forEach(function(color) {
-      $("#actual-colors").append("<li>" + color + "</li>");
+      if (color === "red") {
+        $('#red-display').fadeIn({ duration: 800 });
+        $('#red-display').fadeOut({ duration: 800 });
+      } else if (color === "yellow") {
+        $('#yellow-display').fadeIn({ duration: 800 });
+        $('#yellow-display').fadeOut({ duration: 800 });
+      } else if (color === "blue") {
+        $('#blue-display').fadeIn({ duration: 800 });
+        $('#blue-display').fadeOut({ duration: 800 });
+      } else if (color === "green") {
+        $('#green-display').fadeIn({ duration: 800 });
+        $('#green-display').fadeOut({ duration: 800 });
+      }
     });
-    console.log("computer done!");
   });
 
   $('#red').submit(function(event) {
@@ -69,10 +80,10 @@ $(document).ready(function() {
     event.preventDefault();
     console.log(newSimon.evaluateArrays());
     if (newSimon.evaluateArrays() === true) {
-      $('#game-status').append("<li>" + "Next round!" + "</li>");
+      $('#game-status').text("Next round!");
       newSimon.playerColors = [];
     } else {
-      $('#game-status').append("<li>" + "You failed!" + "</li>");
+      $('#game-status').text("You failed!");
     }
   });
 });
